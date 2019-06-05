@@ -622,6 +622,8 @@ napi_value Image::CopyFromImage(napi_env env, napi_callback_info info) { // {{{
     }
 
     if(argc == 5) {
+        GET_VALUE_WITH_NAPI_FUNC(napi_get_value_uint32, args[1], &x);
+        GET_VALUE_WITH_NAPI_FUNC(napi_get_value_uint32, args[2], &y);
         GET_VALUE_WITH_NAPI_FUNC(napi_get_value_uint32, args[3], &w);
         GET_VALUE_WITH_NAPI_FUNC(napi_get_value_uint32, args[4], &h);
     }
